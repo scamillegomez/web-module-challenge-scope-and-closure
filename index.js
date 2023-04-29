@@ -105,7 +105,7 @@ function finalScore(inningfunct,innings){
   //return gameScore;
 }
 
-//finalScore(inning,3);
+finalScore(inning,3);
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
