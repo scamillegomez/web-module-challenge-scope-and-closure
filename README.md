@@ -62,7 +62,7 @@ Edit the `ReadMe` file with your answers to the questions below.
 
 1. In your own words, define closure (1-2 sentences).
 
-Answer: Closure is basically brackets. Honestly I struggle to say it is one thing, because to me, it is more like a concept to understand. For example, I need to understand that when I see brackets, that means something on the inside of those brackets is closed off and cannot be reached from the outside.
+Closure is basically brackets. Honestly I struggle to say it is one thing, because to me, it is more like a concept to understand. For example, I need to understand that when I see brackets, that means something on the inside of those brackets is closed off and cannot be reached from the outside.
 
 2. Study the following code, then answer the questions below.
 
@@ -85,8 +85,13 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+Closure is within the "function" brackets inside the personal dice function. I know this because it is the innnermost function.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+Dan's name will always stay the same but the number can change.
+
 c. What is the lexical scope of `newRoll`? 
+The function()'s local scope.
 
 
 ### Task 3 - Stretch Goals
