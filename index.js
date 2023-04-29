@@ -30,11 +30,15 @@ console.log('example task:', processFirstItem(['foo','bar'],function(str){return
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-  
+  counter 1's variable will reset each time the function is invoked, while counter2's variable will continue to increase each time the function is invoked
+
   2. Which of the two uses a closure? How can you tell?
-  
+  counter1 uses a closure I think? because the variable count is contained inside the function
+
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+     counter1 is better when you are playing a game which would require the variable to restart each time the game is played. 
+     counter2 is better when you actually need to keep adding something over time.
 */
 
 // counter1 code
@@ -65,8 +69,11 @@ NOTE: This will be a callback function for the tasks below
 */
 
 function inning(/*Code Here*/){
-    /*Code Here*/
+    var ranScore = Math.floor(Math.random() * 2);
+    return ranScore;
 }
+
+//console.log(inning());
 
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
@@ -83,10 +90,22 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*Code Here*/){
-  /*Code Here*/
+function finalScore(inningfunct,innings){
+  var gameScore = {}
+  for (let i = 0 ; i < innings ; i++){
+    var score1 = inningfunct();
+    gameScore.Home = score1;
+    var score2 = inningfunct();
+    gameScore.Away = score2;
+    console.log(gameScore)
+    return gameScore;
+  }
+  //console.log(inningfunct(),innings);
+  //console.log(gameScore);
+  //return gameScore;
 }
 
+//finalScore(inning,3);
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
@@ -101,11 +120,17 @@ For example: invoking getInningScore(inning) might return this object:
   */
 
 
-function getInningScore(/*Your Code Here */) {
-  /*Your Code Here */
+function getInningScore(funct) {
+  var InningScore = {};
+  var homeScore = funct();
+  InningScore.Home = homeScore;
+  var awayScore = funct();
+  InningScore.Away = awayScore;
+  return InningScore;
 
 }
 
+console.log(getInningScore(inning));
 
 /* STRETCH: ⚾️⚾️⚾️ Task 5: scoreboard() ⚾️⚾️⚾️
 Use the scoreboard function below to do the following:
