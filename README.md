@@ -61,6 +61,9 @@ You will be running your tests in one terminal and debugging in the other. As yo
 Edit the `ReadMe` file with your answers to the questions below.
 
 1. In your own words, define closure (1-2 sentences).
+
+Answer: Closure is basically brackets. Honestly I struggle to say it is one thing, because to me, it is more like a concept to understand. For example, I need to understand that when I see brackets, that means something on the inside of those brackets is closed off and cannot be reached from the outside.
+
 2. Study the following code, then answer the questions below.
 
 ```js
